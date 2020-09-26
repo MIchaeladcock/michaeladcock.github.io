@@ -7,7 +7,7 @@ title: THM Jack_of_all_trades Write-up
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
-<HTML>
+
 			<img src="/img/0.header.png">
 			
 			<p>Enumerating  ports with an NMAP Scan.</p>
@@ -129,14 +129,7 @@ title: THM Jack_of_all_trades Write-up
 			
 			
 		
-				<p></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="https://www.linkedin.com/in/michael-adcock-665a6525/">Let's connect</a></li>
-        		<!--<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>-->
-			</ul>
-		</footer>
-	</body>
-</html>
+	
+	
+	
+
