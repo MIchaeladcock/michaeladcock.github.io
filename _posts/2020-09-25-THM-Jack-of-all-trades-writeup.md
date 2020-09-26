@@ -1,8 +1,10 @@
 ---
 layout: post
 title: THM Jack of all trades writeup
+excerpt_separator: <!--more-->
 ---
 <img src="/img/0.header.png">
+<!--more-->
 <p>Enumerating  ports with an NMAP Scan.</p>
 <img src="/img/1.nmap.png">
 <p>Well this is odd. SSH is on port 80 and HTTP on port 22??? Let’s make a curl request to the home directory to see what comes back.</p>
