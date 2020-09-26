@@ -1,6 +1,6 @@
 ---
 layout: post
-title: THM Jack_of_all_trades Write-up
+title: 2020-09-25-THM-Jack-of-all-trades-writeup
 
 ---
 
