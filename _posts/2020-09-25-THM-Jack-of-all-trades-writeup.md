@@ -2,8 +2,6 @@
 layout: post
 title: THM Jack of all trades writeup
 ---
-
-![_config.yml]({{ site.baseurl }})
 <img src="/img/0.header.png">
 <p>Enumerating  ports with an NMAP Scan.</p>
 <img src="/img/1.nmap.png">
