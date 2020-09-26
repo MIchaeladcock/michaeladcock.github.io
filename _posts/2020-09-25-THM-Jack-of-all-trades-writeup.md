@@ -1,6 +1,7 @@
 ---
 layout: post
 title: THM Jack_of_all_trades Write-up
+permalink: /blog/
 ---
 
 
