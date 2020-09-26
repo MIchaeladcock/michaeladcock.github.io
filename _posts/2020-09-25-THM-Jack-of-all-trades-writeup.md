@@ -1,10 +1,7 @@
 ---
 layout: post
-title: 2020-09-25-THM-Jack-of-all-trades-writeup
-
+title: THM Jack of all trades writeup
 ---
-
-
 
 ![_config.yml]({{ site.baseurl }})
 <img src="/img/0.header.png">
