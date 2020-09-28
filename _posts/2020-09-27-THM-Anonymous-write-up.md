@@ -30,7 +30,7 @@ Let’s enumerate the file system.  </p>
 <img src="/img/anon-img/8.to_do.txt_output.png">
 <p> Wow! There’s a bash script that’s probably running on a cron job, the only issue is we don’t know how often it runs. If we’re lucky it runs every few minutes. The good news is we have write  permissions, so It's definitely worth attempting  to gain a shell from it.  </p>
 <img src="/img/anon-img/9.clean.sh_output.png">
-<p>Let’s make a directory on our local machine name ftp and  mount the FTP  directory  using curlftpfs </p>
+<p>Let’s make a directory on our local machine named "FTP" and  mount the remote ftp directory using curlftpfs </p>
 <img src="/img/anon-img/10.mkdir-ftp-and-mount.png">
 <p>Cd into the FTP directory and open the clean.sh file in a text editor.  </p>
 <img src="/img/anon-img/11.cd-gedit-file.png">
