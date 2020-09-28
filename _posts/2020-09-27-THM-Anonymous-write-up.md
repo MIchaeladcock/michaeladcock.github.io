@@ -5,7 +5,7 @@ excerpt_separator: <!--more-->
 ---
 <img src="/img/anon-img/0.header-image.png">
 <!--more-->
-<a href = https://tryhackme.com/room/anonymous > Click here to access this box on tryHackMe.com</a>
+<<a href="https://tryhackme.com/room/anonymous" > Click here to access this box on tryHackMe.com</a>
 <p><b>Question 1. Enumerate the machine. How many ports are open?</b></p>
 <p><b>Question 2. What service is running on port 21?</b></p>
 <p><b>Question 3. What service is running on ports 139 and 445?</b></p>
