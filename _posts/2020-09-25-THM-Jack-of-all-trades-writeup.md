@@ -5,7 +5,7 @@ excerpt_separator: <!--more-->
 ---
 <img src="/img/0.header.png">
 <!--more-->
-https://tryhackme.com/room/jackofalltrades
+<a href="https://tryhackme.com/room/jackofalltrades" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <p>Enumerating  ports with an NMAP Scan.</p>
 <img src="/img/1.nmap.png">
 <p>Well this is odd. SSH is on port 80 and HTTP on port 22??? Let’s make a curl request to the home directory to see what comes back.</p>
