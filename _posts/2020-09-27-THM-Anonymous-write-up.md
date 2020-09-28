@@ -18,7 +18,7 @@ excerpt_separator: <!--more-->
 <p>We’re able to login to the FTP service with anonymous:anonymous 
 Let’s enumerate the file system.  </p>
 <img src="/img/anon-img/4.Ftp_anon_login.png">
-<p> There’s a dir named “scripts”  </p>
+<p> There’s a directory named “scripts”  </p>
 <img src="/img/anon-img/5.FTP_scrips_dir.png">
 <p>There’s four files here. Let’s download these using the get command.  </p>
 <img src="/img/anon-img/6.get_ftp_files.png">
@@ -26,7 +26,7 @@ Let’s enumerate the file system.  </p>
 <p>Looks like these are the only open ports. Now you can answer question 1,2 and 3.</p>
 <img src="/img/anon-img/7.nmap_all_ports_scan_results..png">
 <p><b>Questions 4. There's a share on the user's computer.  What's it called?</b></p>
-<p>Let’s look at the to_do.txt file we download. Nothing helpful here.Let’s look at the other files. </p>
+<p>Let’s look at the "to_do.txt" file we downloaded. Nothing helpful here.Let’s look at the other files. </p>
 <img src="/img/anon-img/8.to_do.txt_output.png">
 <p> Wow! There’s a bash script that’s probably running on a cron job, the only issue is we don’t know how often it runs. If we’re lucky it runs every few minutes. The good news is we have write  permissions, so It's definitely worth attempting  to gain a shell from it.  </p>
 <img src="/img/anon-img/9.clean.sh_output.png">
