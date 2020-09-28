@@ -22,8 +22,8 @@ Let’s enumerate the file system.  </p>
 <img src="/img/anon-img/5.FTP_scrips_dir.png">
 <p>There’s four files here. Let’s download these using the get command.  </p>
 <img src="/img/anon-img/6.get_ftp_files.png">
-<p>We’ll need to review these scripts, but first let’s check on our nmap scan.
-Looks like these are the only open ports. Now you can answer question 1,2 and 3.  </p>
+<p>We’ll need to review these scripts, but first let’s check on our nmap scan.</p>
+<p>Looks like these are the only open ports. Now you can answer question 1,2 and 3.</p>
 <img src="/img/anon-img/7.nmap_all_ports_scan_results..png">
 <p><b>Questions 4. There's a share on the user's computer.  What's it called?</b></p>
 <p>Let’s look at the to_do.txt file we download. Nothing helpful here.Let’s look at the other files. </p>
