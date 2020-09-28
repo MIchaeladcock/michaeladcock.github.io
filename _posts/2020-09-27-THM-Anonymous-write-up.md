@@ -46,9 +46,9 @@ Let’s enumerate the file system.  </p>
 <p>Here we have the user.txt file and the directory of the FTP share we mounted. Let’s cat the user.txt  file, answer question 4 and 5. </p>
 <img src="/img/anon-img/16.-user.txt.png">
 <p>Now let’s start enumerating and try to gain a root shell. 
-We can’t write to the passwd or shadow file, but it appears that we’re the only other useful user beside root so no lateral I don’t think we’ll need a lateral movement. Keep enumerating.  </p>
+We can’t write to the passwd or shadow file, but it appears that we’re the only other useful user beside root, so no lateral movement should be needed to gain root. Let's keep enumerating.  </p>
 <img src="/img/anon-img/17.passwd-shadow-files.png">
-<p>Nothing's standing out. Let’s try running linpeas. On your local host setup a python simple http server to host the linepeas  file.  </p>
+<p>After chacking the "usual suspects", nothing's standing out. Let’s try running linpeas and see what we can find.</p> <p>On your local host setup a python simple http server to host the linepeas file. </p>
 <img src="/img/anon-img/18.pythong-simple-server.png">
 <p>Back in your shell, if you're not already, navigate to your home folder and issue a wget command to download the linepease file. </p>
 <img src="/img/anon-img/19.download-linpease.png">
