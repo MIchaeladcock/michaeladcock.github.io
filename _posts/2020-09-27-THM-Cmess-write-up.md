@@ -29,13 +29,13 @@ excerpt_separator: <!--more-->
 <img src="/img/cmess/6.nmap-scann-5.png"/>
 
 
-<p>Here i’m using gobuster to enumerate the sub directories 
+<p>Here I’m using gobuster to enumerate the sub directories 
 gobuster dir -u 10.10.101.52 -w /usr/share/wordlists/dirb/common.txt -t 200
 </p>
 <img src="/img/cmess/7.gobuster.png"/>
 
 
-<p>While this is working let’s see what we have on port 80. Let’s see if we can get a version number of Gila CMS install</p>
+<p>While gobuster is working let’s see what we have on port 80. First I’m going to see if I can find a version number of Gila CMS install.</p>
 <img src="/img/cmess/8.cms-index-page.png"/>
 
 
@@ -58,7 +58,7 @@ gobuster dir -u 10.10.101.52 -w /usr/share/wordlists/dirb/common.txt -t 200
 <img src="/img/cmess/12.hosts-file2.png"/>
 
 
-<p>Navigating to this directory we find a development log with credentials and a clure to a poisable exploit. 
+<p>Navigating to this directory we find a development log with credentials and a clue to a possible exploit 
 </p>
 <img src="/img/cmess/13.dev-log.png"/>
 
