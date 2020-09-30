@@ -6,7 +6,8 @@ excerpt_separator: <!--more-->
 <img src="/img/cmess/0.head.png"/>
 <!--more-->
 <a href="https://tryhackme.com/room/cmess" target="_blank" > Click here to access this box on tryHackMe.com</a>
-<p>Here I’m adding  “cmess.thm” and the IP address  to our hosts file.</p>
+<p>This box demonstrates how sensitive data exposure https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A3-Sensitive_Data_Exposure and a misconfigured cron job  https://medium.com/@int0x33/day-67-tar-cron-2-root-abusing-wildcards-for-tar-argument-injection-in-root-cronjob-nix-c65c59a77f5e can lead to a complete system takeover.  Below are the steps I took to abuse the security issues and gain root privilege on this box. </p>
+<p>To start let's add “cmess.thm” and the box's IP address  to our hosts file.</p>
 <img src="/img/cmess/1.hosts-file.png"/>
 
 <p>As usual let’s start with a nmap scan. On my first scan I'm only going to scan the  top 1000. I do this by not adding an arguments.</p>
