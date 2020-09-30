@@ -3,7 +3,7 @@ layout: post
 title: THM Cmess Write-up
 excerpt_separator: <!--more-->
 ---
-<img src="/img/cmess/cmess-img/0.head.png">
+<img src="/img/cmess/cmess/0.head.png">
 <!--more-->
 <a href="https://tryhackme.com/room/cmess" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <p>Here I’m adding  “cmess.thm” and the IP address  to our hosts file.</p>
