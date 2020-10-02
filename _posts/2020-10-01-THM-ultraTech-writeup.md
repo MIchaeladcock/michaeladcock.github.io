@@ -1,4 +1,4 @@
-0.img
+0.png
 
 <p>To start I’m gonna run a simple nmap scan against the host IP just on the top 1000 ports.   </p>
 <p> The results show ports 21, 22 and 8081 being open </p>
@@ -94,4 +94,4 @@ Madmin: mrsheafy
 
 
 <p>What we need to do is change the default docker container name to the one running “bash” and we have a shell with root privileges. Now we just need to cat the root private ssh key to complete the box</p>
-<img src="/img/ultratech/"/>
+<img src="/img/ultratech/28.root-priesc-docker.png"/>
