@@ -3,7 +3,7 @@ layout: post
 title: THM UltraTech Write-up
 excerpt_separator: <!--more-->
 ---
-<img src="/img/ultratech/0.head.png"/>
+<img src="/img/ultratech/0.png"/>
 <!--more-->
 
 
