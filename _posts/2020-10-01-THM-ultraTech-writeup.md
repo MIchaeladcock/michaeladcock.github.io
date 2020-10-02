@@ -1,4 +1,4 @@
-0.png
+<img src="/img/ultratech/0.png"/>
 
 <p>To start I’m gonna run a simple nmap scan against the host IP just on the top 1000 ports.   </p>
 <p> The results show ports 21, 22 and 8081 being open </p>
