@@ -5,8 +5,9 @@ excerpt_separator: <!--more-->
 ---
 <img src="/img/ultratech/0.png"/>
 <!--more-->
+<p>This box demonstrates how a command injection attack (OWASP TOP 10) from GET request that passes unsafe user supplied data and a misconfiguration security permission with Docker can lead to a complete system takeover. </p>
 
-
+<hr>
 
 <p>To start I’m gonna run a simple nmap scan against the host IP just on the top 1000 ports.   </p>
 <p> The results show ports 21, 22 and 8081 being open </p>
