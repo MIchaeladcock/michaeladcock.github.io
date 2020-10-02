@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 <img src="/img/ultratech/0.png"/>
 <!--more-->
 <p>This box demonstrates how a command injection attack (OWASP TOP 10) from GET request that passes unsafe user supplied data and a misconfiguration security permission with Docker can lead to a complete system takeover. </p>
-
+You can access this box here <a href="https://tryhackme.com/room/ultratech1">tryhackme.com</a>
 <hr>
 
 <p>To start I’m gonna run a simple nmap scan against the host IP just on the top 1000 ports.   </p>
@@ -68,16 +68,16 @@ excerpt_separator: <!--more-->
 <p>The contents of the database has two usernames and password hashes. Let’s try and crack them.</p>
 <img src="/img/ultratech/19.sqli-hashes.png"/>
 
-<p>Before we try John or Hashcat let’s give crackstation.net a shot at this hash</p>
+<p>Before we try John or Hashcat let’s give crackstation.net a shot at this hash.</p>
 <p>Great! Crackstation was able to crack this password.Let’s try the other password hash</p> 
 <img src="/img/ultratech/20.mr00t-cracked-hash.png"/>
 
 
 
-<p>I’m surprised. It cracked that password too. Now we have 3 places we can try these logins: FTP ,SSH and the partners.html login portal. Let’s try them out</p>
+<p>I’m surprised. It cracked that password too. Now we have 3 places we can try these logins: FTP,SSH and the partners.html login portal. Let’s try them out</p>
 <img src="/img/ultratech/21.Madmin-cracked-password.png"/>
 
-<p>I tried both users in FTP, SSH and partner web login page and only one users creditials worked on the FTP and SSH. There was nothing interesting in the partners web portal. Let’s enumerate the server using the SSH connection </p>
+<p>I tried both users in FTP, SSH and partner web login page and only one users credentials  worked on the FTP and SSH. There was nothing interesting in the partners web portal. Let’s enumerate the server using the SSH connection </p>
 <img src="/img/ultratech/23.web-portal-login.png"/>
 <img src="/img/ultratech/22.ssh-succes.png"/>
 
@@ -85,7 +85,7 @@ excerpt_separator: <!--more-->
 <img src="/img/ultratech/24.privesc-attempt1.png"/>
 
 
-<p>This is interesting.. I’m in a user group named “docker”.Maybe we’re in a docker container?? </p>
+<p>This is interesting.. I’m in a user group named “docker”. Maybe we’re in a docker container?? </p>
 <img src="/img/ultratech/25.user-group.png"/>
 
 <p>I ran this command to verify we’re in a docker container and to grab the name of the other(s) containers that may be running. I found one named “bash”</p>
@@ -94,10 +94,10 @@ excerpt_separator: <!--more-->
 <p>Let’s spawn a shell in the container we found</p>
 <img src="/img/ultratech/27.Docker-container-shell.png"/>
 
-<p>That didn’t work so I exited that shell, checked GTFObins and found this command  </p>
+<p>That didn’t work so I exited that shell, checked GTFObins and found this command.  </p>
 <img src="/img/ultratech/29.GTFO-bins.png"/>
 
 
 
-<p>What we need to do is change the default docker container name to the one running “bash” and we have a shell with root privileges. Now we just need to cat the root private ssh key to complete the box</p>
+<p>What we need to do is change the default docker container name to the one running “bash” and we have a shell with root privileges. Now we just need to cat the root private ssh key to complete the box.</p>
 <img src="/img/ultratech/28.root-priesc-docker.png"/>
