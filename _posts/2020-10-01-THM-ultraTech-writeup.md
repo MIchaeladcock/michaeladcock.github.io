@@ -61,8 +61,8 @@ excerpt_separator: <!--more-->
 <p>I used burpsuite to intercept the http request on the login page and in doing so I found a API GET request that was running every few seconds.</p>
 <img src="/img/ultratech/17.get-request.png"/>
 
-<p>After fuzzing the get requests for a while I found where I can injection vulnerability by appending  a bash command in the url </p>
-<p>I can list the contents of the current directory and we find a sqlite db. Let’s see is we can read the contents</p>
+<p>After fuzzing the get requests for a while I found where I an injection vulnerability by appending a command in the url </p>
+<p>When I list the contents of the directory and we find a sqlite db. Let’s see if we can read the contents</p>
 <img src="/img/ultratech/18.injection-test.png"/>
 
 <p>The contents of the database has two usernames and password hashes. Let’s try and crack them.</p>
