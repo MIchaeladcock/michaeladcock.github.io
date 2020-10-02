@@ -72,9 +72,6 @@ excerpt_separator: <!--more-->
 <p>Great! Crackstation was able to crack this password.Let’s try the other password hash</p> 
 <img src="/img/ultratech/20.mr00t-cracked-hash.png"/>
 
-Mr00t:n100906
-
-Madmin: mrsheafy
 
 
 <p>I’m surprised. It cracked that password too. Now we have 3 places we can try these logins: FTP ,SSH and the partners.html login portal. Let’s try them out</p>
