@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 <hr>
 
 
-<p>Enumerating  ports with a basic NMAP Scan.</p>
+<p>Let's start by enumerating the host's ports with a basic NMAP Scan.</p>
 <img src="/img/res/1.nmap-scan-1.png">
 
 <p>Only one port shows to be open. Let’s enumerate it further for version,service and os detection. </p>
