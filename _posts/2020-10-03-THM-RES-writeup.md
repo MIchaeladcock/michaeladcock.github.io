@@ -4,7 +4,7 @@ title: THM RES  writeup
 excerpt_separator: <!--more-->
 ---
 <img src="/img/res/0.head.png">
-<!--more→
+<!--more-->
 <p></p>
 <a href="https://tryhackme.com/room/res" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <hr>
