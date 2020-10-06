@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 <img src="/img/Convertmyvideo/0.head.png">
 <!--more--> 
 <p></p>
-<a href="https://tryhackme.com/room/res" target="_blank" > Click here to access this box on tryHackMe.com</a>
+<a href="https://tryhackme.com/room/convertmyvideo" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <hr>
 
 
