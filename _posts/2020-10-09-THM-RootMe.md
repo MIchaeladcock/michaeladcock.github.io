@@ -5,12 +5,16 @@ excerpt_separator: <!--more-->
 ---
 <img src="/img/rootme/0.head.png">
 <!--more--> 
-<p></p>
+
 <a href="https://tryhackme.com/room/rrootme" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <hr>
 
+<p> This box simulates how a local file upload web form that isn’t properly sanitized and a miconfiguard user permission can lead to a complete system take over . In this write up I demonstrate how I would identify and abuse these mistakes. </p>    
+
 <H1> ENUMERATION:</H1>
+
 <hr>
+
 <p> Start by enumerating  ports with a NMAP Scan.</p>
 <p>Nmap reports that we have port 22 OpenSSH ver. 7.6 and port 80 Apache 2.4.29 open. Let’s open a web browser and see what's on port 80</p>
 <img src="/img/rootme/1.nmap-scan.png">
