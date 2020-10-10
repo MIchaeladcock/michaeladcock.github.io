@@ -18,7 +18,7 @@ excerpt_separator: <!--more-->
 <p>Not much here… let’s check the page source.</p>
 <img src="/img/rootme/2.defualt-webpage.png">
 
-<p>Not a lot in the source code either. There’s basic HTML and CSS with a small javascript function. Let’s see if there are any hidden subdirectories by gobuster and common wordlist</p>
+<p>Not a lot in the source code either. There’s basic HTML and CSS with a small javascript function. Let’s see if there are any hidden subdirectories by useing gobuster and common wordlist.</p>
 <img src="/img/rootme/4.gobuster-common.png">
 
 <p>There’s a directory named panel and uploads. When we navigate there we are presented with a file upload form.</p>
@@ -36,22 +36,22 @@ excerpt_separator: <!--more-->
 <p>My Pourtguese isn’t very good but I believe this says file extention php isn’t allowed. Lol</p>
 <img src="/img/rootme/9.test-upload-fail.png">
 
-<p>Let’s intercept this request in Burp Suite and fuzz the file extension </p>
+<p>Let’s intercept this request in Burp Suite and fuzz the file extension. </p>
 <img src="/img/rootme/10.Burp-request.png">
 
-<p>I captured the upload  port request and sent it to intruder </p>
+<p>I captured the upload post request and sent it to intruder. </p>
 <img src="/img/rootme/11.Burp-intruder.png">
 
-<p>First let’s try some basic php payloads.</p>
+<p>First let’s try some basic php extension payloads.</p>
 <img src="/img/rootme/12.Burp-payloads.png">
 
-<p>Start the attack and see what comes back. So it appears that a lot of file extensions are allowed. .php5 is a common one let’s try a payload with that extensions </p>
+<p>Let's start the attack and see what comes back. It appears that there's a lot of file extensions are allowed. .php5 is a common one - let’s try a payload with that extension. </p>
 <img src="/img/rootme/13.files-success.png">
 
-<p>Here I’m using a reverse shell php code from PentestMonkey. If you use this script all you really need to change is the ip address to reflect your machine's IP andchange the extension to .php5. I’ll use port 4444 to setup a listener next</p>
+<p>Here I’m using a reverse shell php code from PentestMonkey. If you use this script all you really need to change is the ip address to reflect your machine's IP and change the extension to .php5. I’ll use port 4444 to setup a listener next</p>
 <img src="/img/rootme/15.pentsetMonky-rev-shell.png">
 
-<p>Here I setup the listener </p>
+<p>Here I setup the listener. </p>
 <img src="/img/rootme/14.nc-listner.png">
 
 <p>Upload the php reverse shell code.</p>
@@ -68,7 +68,7 @@ excerpt_separator: <!--more-->
 <p>As expected we dropped in as www-data. We’ll need to enumerate to find an privesc path.</p>
 <img src="/img/rootme/19.whoami.png">
 
-<p>It appears that we only have one other user other than root. I suspect we’ll need to move laterally to the rootme user before we can move root.Let’s keep enumerating. First I’m going for the easy wins by password huning, checking suid, guid and contab </p>
+<p>It appears that we only have one other user other than root. I suspect we’ll need to move laterally to the rootme user before we can move the root user.Let’s keep enumerating. First I’m going for the easy wins by password huning, checking suid, guid and contab </p>
 <img src="/img/rootme/20.users.png">
 
 <H1>Gaining root </H1>
@@ -77,7 +77,7 @@ excerpt_separator: <!--more-->
 <img src="/img/rootme/21.python-setuid.png">
 
 
-<p>Easy privesc. Just run this command from the /usr/bin directory. The “-p” retains  the SUID bit permissions  set and does not drop the elevated privileges ( in our case root). And elevates the shell permissions to root  </p>
+<p>Easy privesc. Just run this command from the /usr/bin directory. The “-p” retains  the SUID bit permissions  set and does not drop the elevated privileges ( in our case root). And elevates the shells permissions to root . </p>
 <img src="/img/rootme/22.root-esclation..png">
 
 
