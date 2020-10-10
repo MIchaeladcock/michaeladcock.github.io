@@ -9,7 +9,8 @@ excerpt_separator: <!--more-->
 <a href="https://tryhackme.com/room/rrootme" target="_blank" > Click here to access this box on tryHackMe.com</a>
 <hr>
 
-<b> ENUMERATION:</b>
+<H1> ENUMERATION:</H1>
+<hr>
 <p> Start by enumerating  ports with a NMAP Scan.</p>
 <p>Nmap reports that we have port 22 OpenSSH ver. 7.6 and port 80 Apache 2.4.29 open. Let’s open a web browser and see what's on port 80</p>
 <img src="/img/rootme/1.nmap-scan.png">
@@ -26,7 +27,8 @@ excerpt_separator: <!--more-->
 <p>So we know we’re running Linux Ubuntu on Apache. So I’m thinking we should try and upload a php reverse shell payload and execute it from the upload page. </p>
 <img src="/img/rootme/6.uploads-page.png">
 
-<b> Gaining a foothold </b>
+<H1> Gaining a foothold:</H1>
+<hr>
 <p>First let’s test to see if the file extension .php is allowed.</p>
 <img src="/img/rootme/7.test-php">
 <img src="/img/rootme/8.test-upload.png">
@@ -61,19 +63,19 @@ excerpt_separator: <!--more-->
 <p>Let’s change our port to 4444 and try again... and we have a shell.</p>
 <img src="/img/rootme/18.first-shell.png">
 
-<b> Privilege Escalation  </b> 
+<h1> Privilege Escalation:  </h1>
+<hr>
 <p>As expected we dropped in as www-data. We’ll need to enumerate to find an privesc path.</p>
 <img src="/img/rootme/19.whoami.png">
 
 <p>It appears that we only have one other user other than root. I suspect we’ll need to move laterally to the rootme user before we can move root.Let’s keep enumerating. First I’m going for the easy wins by password huning, checking suid, guid and contab </p>
 <img src="/img/rootme/20.users.png">
 
-<b>Gaining root </b>
-
+<H1>Gaining root </H1>
+<hr>
 <p>While checking the SUID the python binary was set.</p>
 <img src="/img/rootme/21.python-setuid.png">
-<p></p>
-<img src="/img/rootme/">
+
 
 <p>Easy privesc. Just run this command from the /usr/bin directory. The “-p” retains  the SUID bit permissions  set and does not drop the elevated privileges ( in our case root). And elevates the shell permissions to root  </p>
 <img src="/img/rootme/22.root-esclation..png">
