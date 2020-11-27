@@ -36,13 +36,13 @@ excerpt_separator: <!--more-->
 <p>When we navigate to that page we’re presented with an input box that says command. Let’s try and issue some commands. Since we know from NMAP this is probably a Liux box let’s try some bash commands</p>
 <img src="/img/chillhack/8.secret-page.png">
 
-<p>If we type “id command we get a response in our web browser. Let’s try and get a use net cat to get a basic reverse shell.</p>
+<p>If we type “id" command we get a response in our web browser. Let’s try and get a use net cat to get a basic reverse shell.</p>
 <img src="/img/chillhack/9.id-input.png">
 
 <p>First let’s set up a listener on our attacking machine to catch the shell.</p>
 <img src="/img/chillhack/10.nc-listner.png">
 
-<p>Okay, I didn't think it would be that easy. This must be what the note.txt in the FTP server was speaking about. There filtering out some keywords - “nc” appears to be one on the list</p>
+<p>Okay, I didn't think it would be that easy. This must be what the note.txt in the FTP server was speaking to. They're filtering out some keywords - “nc” appears to be one on the list</p>
 <img src="/img/chillhack/11.nc-fail.png">
 
 <p>I tried using Burp Suite to send the POST request to try and bypass any client side scripting that may be filtering input data. That didn’t work</p>
