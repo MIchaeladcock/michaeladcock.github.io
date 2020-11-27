@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 <hr>
 <h1>ENUMERATION:</h1>
 <hr>
-<p>Start by enumerating  ports with an NMAP Scan.</p>
+<p>Let's start by scanning for open ports with NMAP.</p>
 <p>In the output below we can see that FTP (port 21) and SSH (port 22) are open. There’s also an apache  web server running on port 80</p>
 <p>First let see what's in the note.txt file on the FTP service since anonymous login is allowed</p>
 <img src="/img/chillhack/1.nmap.png">
