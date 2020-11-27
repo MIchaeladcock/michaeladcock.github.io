@@ -21,7 +21,7 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack/3.ftp-note-dl.png">
 
 <p>Read the contents of the file.</p>
-<p> This isn’t very helpful right now, but will take note of this. </p>
+<p> This isn’t very helpful right now but will take note of this. </p>
 <p> Let’s enumerate the webserver in our web browser.</p>
 <img src="/img/chillhack/4.note-text.png">
 
