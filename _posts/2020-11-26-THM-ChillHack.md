@@ -64,7 +64,7 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack/17.files.png">
 
 <p>When we cat the index.php file we find a mysql user name and password. Let’s note these and see if we can connect to the mysql server. </p>
-<img src="/img/chillhack18.mysql-creds.png/">
+<img src="/img/chillhack/18.mysql-creds.png/">
 
 <p>We’re connected to the SQL database. Let’s begin enumerating.</p>
 <img src="/img/chillhack/19.mysql-login.png">
@@ -81,7 +81,7 @@ excerpt_separator: <!--more-->
 <p>They were very weak passwords and crackstation.net was able to crack both. Let’s note the user names and password and keep enumerating. </p>
 <img src="/img/chillhack/23.crack-station.png">
 
-<p>Let’s cech the images we download from the images folder on the server. First let’s try the .jpg and see if these any hidden data in it.</p>
+<p>Let’s check the images we download from the images folder on the server. First let’s try the .jpg and see if these any hidden data in it.</p>
 <img src="/img/chillhack/">
 
 <p>Using steghide I was able to extract a file named backup.zip. Let’s unzip and see what’s inside.</p>
