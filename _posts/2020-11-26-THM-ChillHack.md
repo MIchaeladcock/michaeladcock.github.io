@@ -1,6 +1,6 @@
 ---
 layout: post
-title: THM Chatterbox writeup
+title: THM Chill Hack writeup
 excerpt_separator: <!--more-->
 ---
 <img src="/img/chillhack/0.head.png">
